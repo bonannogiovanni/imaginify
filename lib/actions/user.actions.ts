@@ -22,7 +22,6 @@ export async function createUser(user: CreateUserParams) {
 // READ
 export async function getUserById(userId: string) {
   try {
-    console.log("pippiö", userId);
     await connectToDatabase();
 
     const user = await User.findOne({ clerkId: userId });
